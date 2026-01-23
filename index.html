@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor Cósmico - Nuestra Historia</title>
+    <style>
+        :root {
+            --azul-profundo: #0b1a2d;
+            --azul-tarjeta: #162a44;
+            --dorado: #d4af37;
+            --blanco-carta: #ffffff;
+            --azul-brillante: #4da3ff;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: var(--azul-profundo) url('https://www.transparenttextures.com/patterns/stardust.png');
+            font-family: 'Arial', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            letter-spacing: 5px;
+            color: var(--dorado);
+            margin: 0;
+            text-transform: uppercase;
+        }
+
+        .header p {
+            font-style: italic;
+            color: var(--azul-brillante);
+        }
+
+        /* Contador Circular */
+        .main-counter {
+            border: 3px solid var(--dorado);
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px var(--dorado);
+            margin-bottom: 30px;
+        }
+
+        .main-counter span {
+            font-size: 1.2rem;
+            color: var(--dorado);
+        }
+
+        /* Sección Recuerdos */
+        .section-title {
+            color: var(--azul-brillante);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 20px 0;
+        }
+
+        .timeline {
+            width: 90%;
+            max-width: 500px;
+        }
+
+        .card {
+            background: var(--azul-tarjeta);
+            border-radius: 15px;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-left: 5px solid var(--dorado);
+        }
+
+        .card h3 { color: var(--azul-brillante); margin: 0; }
+        .card .fecha { color: #888; font-size: 0.8rem; }
+
+        /* Video y Fotos */
+        .media-container {
+            width: 90%;
+            max-width: 500px;
+            background: var(--azul-tarjeta);
+            padding: 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .video-wrapper {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid var(--dorado);
+            margin-bottom: 20px;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .photo-grid img {
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid var(--dorado);
+        }
+
+        /* Carta Romántica */
+        .carta-blanca {
+            background: var(--blanco-carta);
+            color: #222;
+            width: 85%;
+            max-width: 450px;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            position: relative;
+        }
+
+        .carta-blanca h2 {
+            font-family: 'Georgia', serif;
+            color: var(--azul-tarjeta);
+            text-align: center;
+            font-style: italic;
+        }
+
+        .firma {
+            text-align: right;
+            font-family: 'Cursive', sans-serif;
+            font-size: 1.5rem;
+            color: var(--azul-brillante);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Amor Cósmico</h1>
+        <p>Un viaje al reencuentro del corazón</p>
+    </div>
+
+    <div class="main-counter">
+        <span id="dias-grande">000</span>
+        <span>DÍAS</span>
+    </div>
+
+    <h2 class="section-title">Nuestra Historia</h2>
+    <div class="timeline">
+        <div class="card">
+            <h3>El Primer Encuentro</h3>
+            <p class="fecha">19 de julio del 2025</p>
+            <p>Ese día, mi corazón supo que había encontrado a su otra mitad.</p>
+        </div>
+        <div class="card">
+            <h3>Nuestro segundo encuentro</h3>
+            <p class="fecha">26 de Julio, 2025</p>
+            <p>Todavía puedo recordar como venías hacia mi corriendo para abrazarme..</p>
+        </div>
+        <div class="card">
+            <h3>Nuestra primera cita</h3>
+            <p class="fecha">19 de noviembre del 2025</p>
+            <p>Jaja ese día estaba rogando que dejaras un pedazo de pizza.</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Momentos Inolvidables</h2>
+    <div class="media-container">
+        <div class="video-wrapper">
+            <iframe width="100%" height="250" src="URL_DE_TU_VIDEO_AQUÍ" frameborder="0" allowfullscreen></iframe>
+        </div>
+        
+        <div class="photo-grid">
+            <img src="URL_FOTO_1" alt="Nosotros 1">
+            <img src="URL_FOTO_2" alt="Nosotros 2">
+        </div>
+    </div>
+
+    <div class="carta-blanca">
+        <h2>Carta de Mi Corazón</h2>
+        <p>Déjame ser el amor más bonito que has tenido, déjame amarte como nadie lo hizo, déjame entrar en tu vida como un torbellino, y arrasarte el corazón de alegría y amor.</p>
+        <p>Tal vez no sea el mejor pintor, pero eres mi obra de arte favorita. Tal vez no sea un astronauta, pero al verte, solo pensé en la luna; eres igual que ella.</p>
+        <p>Conocerte fue como escuchar una canción por primera vez y saber que sería mi favorita.</p>
+        <div class="firma">Con todo mi amor, Santiago</div>
+    </div>
+
+    <script>
+        const fechaInicio = new Date('July 19, 2025 00:00:00').getTime();
+        setInterval(function() {
+            const ahora = new Date().getTime();
+            const diferencia = ahora - fechaInicio;
+            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+            document.getElementById("dias-grande").innerHTML = dias.toString().padStart(3, '0');
+        }, 1000);
+    </script>
+</body>
+</html>
