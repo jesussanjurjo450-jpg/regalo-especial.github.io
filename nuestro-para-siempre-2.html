@@ -1,282 +1,133 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#240b18">
-<title>Nuestro para siempre</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Coromorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#fbf1f2;--paper:#fff9f8;--ink:#3a1423;--muted:#7c4d5e;--rose:#b03358;--gold:#9c7440;--line:#e9cbd2;--glow:rgba(244,167,187,.38);--shadow:0 18px 55px rgba(90,30,50,.13);--script:'Pinyon Script',cursive;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0%,var(--glow),transparent 55%),var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.65}
-body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.16;background-image:radial-gradient(#b8798c .7px,transparent .7px);background-size:23px 23px;z-index:-1}
-button,input,textarea{font:inherit}button{cursor:pointer}.page{max-width:980px;margin:auto;padding:20px 22px 80px}.topbar{display:flex;justify-content:flex-end;align-items:center;gap:10px;min-height:42px}.theme-btn,.small-btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:30px;padding:8px 14px;font-size:13px}
-.hero{text-align:center;padding:52px 10px 34px}.eyebrow{text-transform:uppercase;letter-spacing:.28em;font-size:11px;color:var(--rose)}h1,h2,h3,p{margin-top:0}.hero h1{font:400 clamp(58px,12vw,108px)/.98 var(--script);margin:10px 0;color:var(--rose)}.subtitle{font:italic 22px var(--serif);color:var(--muted);max-width:570px;margin:0 auto}.ornament{display:flex;align-items:center;justify-content:center;gap:14px;color:var(--gold);margin:24px auto}.ornament:before,.ornament:after{content:"";width:70px;height:1px;background:var(--line)}.hero-date{font-size:12px;letter-spacing:.16em;color:var(--muted)}
-section{margin:52px 0;scroll-margin-top:25px}.section-head{text-align:center;margin-bottom:24px}.section-head .eyebrow{margin-bottom:5px}.section-head h2{font:500 clamp(34px,6vw,48px)/1.1 var(--serif);margin:0;color:var(--ink)}.section-head p{color:var(--muted);font-size:14px;margin:8px auto 0;max-width:560px}
-.paper{background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:var(--shadow);padding:clamp(22px,5vw,42px);position:relative}.paper:before{content:"";position:absolute;inset:7px;border:1px solid rgba(156,116,64,.18);border-radius:5px;pointer-events:none}
-.intro{text-align:center;max-width:760px;margin:auto}.intro .script{font:42px var(--script);color:var(--rose)}.intro p{font:20px/1.7 var(--serif);color:var(--muted);max-width:650px;margin:8px auto 0}
-.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.story-card{background:var(--paper);border:1px solid var(--line);padding:23px;border-radius:8px;box-shadow:var(--shadow)}.story-card .number{font:32px var(--script);color:var(--rose)}.story-card h3{font:600 25px var(--serif);margin:2px 0 8px}.story-card p{color:var(--muted);margin:0;white-space:pre-wrap}.story-card time{display:block;color:var(--gold);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}
-.timeline{max-width:700px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:14px;top:5px;bottom:5px;width:1px;background:var(--line)}.moment{position:relative;padding:0 0 25px 48px}.moment:before{content:"♥";position:absolute;left:5px;top:0;width:20px;height:20px;border-radius:50%;background:var(--paper);color:var(--rose);font-size:12px;text-align:center;border:1px solid var(--line)}.moment h3{font:600 23px var(--serif);margin:0}.moment time{font-size:11px;letter-spacing:.1em;color:var(--gold);text-transform:uppercase}.moment p{color:var(--muted);margin:4px 0 0;white-space:pre-wrap}
-.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.photo{background:#fff;padding:9px 9px 30px;box-shadow:0 8px 22px rgba(70,25,40,.12);transform:rotate(var(--tilt));transition:transform .2s}.photo:hover{transform:rotate(0) translateY(-4px)}.photo img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;background:#f1dfe4}.photo figcaption{text-align:center;font:20px var(--script);color:#714253;padding-top:7px;overflow-wrap:anywhere}.empty{text-align:center;color:var(--muted);padding:30px 12px;border:1px dashed var(--line);border-radius:8px;grid-column:1/-1}
-.counter-wrap{background:linear-gradient(145deg,#3b1428,#6b2942);color:#fff8f5;text-align:center;border-radius:12px;padding:35px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden}.counter-wrap:before,.counter-wrap:after{content:"✦";position:absolute;color:rgba(255,255,255,.2);font-size:45px}.counter-wrap:before{left:7%;top:12%}.counter-wrap:after{right:8%;bottom:10%}.counter-wrap h2{font:400 45px var(--script);margin:0 0 5px}.counter-wrap p{color:#f0cbd6;margin:0 0 22px}.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.unit{min-width:78px;padding:12px 10px;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(255,255,255,.07)}.unit strong{display:block;font:500 36px var(--serif);line-height:1.1}.unit span{font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:#f0cbd6}.wedding-date{margin:19px 0 16px!important;font-size:13px!important;color:#fff!important}.gold-btn,.rose-btn{border:0;border-radius:30px;padding:11px 22px;background:#e5c28b;color:#351729;font-weight:600;box-shadow:0 5px 16px rgba(0,0,0,.12)}.rose-btn{background:var(--rose);color:white}.counter-note{font-size:12px;color:#f0cbd6;margin-top:12px!important}.achieved{font:42px var(--script);color:#f5d9a8;margin:12px 0 0}
-.music-card{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.vinyl{width:94px;height:94px;flex:0 0 94px;border-radius:50%;background:repeating-radial-gradient(circle,#26111d 0 3px,#39202c 4px 5px);display:grid;place-items:center;box-shadow:0 8px 20px #0002}.vinyl:after{content:"♥";width:27px;height:27px;border-radius:50%;background:#d9a1ad;color:#5b263b;display:grid;place-items:center}.music-info{flex:1;min-width:180px}.music-info h3{font:600 27px var(--serif);margin:0}.music-info p{font-size:13px;color:var(--muted);margin:2px 0 12px}.music-controls{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.music-controls audio{max-width:100%;height:36px}
-.editor{margin-top:24px;background:rgba(255,255,255,.55);border:1px solid var(--line);border-radius:9px;padding:20px}.editor h3{font:600 24px var(--serif);margin:0 0 12px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:var(--muted);font-weight:600}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:7px;padding:10px 12px;background:var(--paper);color:var(--ink);outline-color:var(--gold)}.field textarea{min-height:86px;resize:vertical}.editor-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.hint{font-size:11px;color:var(--muted);margin:8px 0 0}.footer{text-align:center;padding:35px 10px 10px;color:var(--muted);font:24px var(--script)}.footer small{display:block;font:11px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}
-body.dark{--bg:#240b18;--paper:#331424;--ink:#fbe9ee;--muted:#d1a6b4;--rose:#f59bb4;--gold:#e3b987;--line:#5a2a40;--glow:rgba(176,51,88,.24);--shadow:0 18px 55px rgba(0,0,0,.35)}
-body.dark .photo{background:#fff}body.dark .photo figcaption{color:#714253}body.dark .editor{background:#2c1020}
-@media(max-width:650px){.page{padding:12px 15px 55px}.hero{padding-top:35px}.story-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.unit{min-width:66px}.unit strong{font-size:30px}.paper{padding:25px 20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.music-card{justify-content:center;text-align:center}.music-info{flex-basis:100%}.music-controls{justify-content:center}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-
-.welcome-screen{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 18px;background:radial-gradient(ellipse at 50% 35%,rgba(174,74,105,.25),transparent 48%),linear-gradient(145deg,#210b18,#3b1428 58%,#1d0915);color:#fff3f6;text-align:center;overflow:hidden;transition:opacity 1s ease,visibility 1s ease}
-.welcome-screen:before,.welcome-screen:after{content:"✦";position:absolute;color:rgba(255,222,231,.35);font-size:24px;animation:twinkle 3s ease-in-out infinite alternate}
-.welcome-screen:before{top:13%;left:13%}.welcome-screen:after{right:15%;bottom:18%;animation-delay:1.2s}
-.welcome-card{width:min(100%,430px);padding:34px 25px 30px;border:1px solid rgba(255,220,230,.24);border-radius:22px;background:rgba(255,245,248,.075);box-shadow:0 22px 80px rgba(0,0,0,.25);backdrop-filter:blur(8px);position:relative}
-.welcome-kitten{font-size:54px;line-height:1.2;filter:drop-shadow(0 5px 14px rgba(255,170,195,.3));margin-bottom:7px}
-.welcome-sparkle{color:#f1c7a0;letter-spacing:.35em;font-size:14px}
-.welcome-kicker{font-size:10px;letter-spacing:.24em;color:#e8b8c7;margin:14px 0 7px}
-.welcome-card h2{font:400 clamp(48px,12vw,65px)/1.05 var(--script);color:#ffdce7;margin:0 0 14px}
-.welcome-copy{font:italic 21px/1.35 var(--serif);color:#f5dce4;margin:0 auto 19px;max-width:310px}
-.date-code input{width:210px;text-align:center;letter-spacing:.28em;font:500 19px var(--sans);color:#fff8fa;background:rgba(255,255,255,.09);border:1px solid rgba(255,220,230,.38);border-radius:12px;padding:13px 12px;outline:none}
-.date-code input::placeholder{color:#d9aab9;letter-spacing:.15em;font-size:13px}
-.date-code input:focus{border-color:#f3c5d4;box-shadow:0 0 0 3px rgba(243,197,212,.12)}
-.welcome-button{display:block;margin:17px auto 0;border:0;border-radius:30px;padding:12px 23px;background:linear-gradient(110deg,#f2c6d2,#e8bd91);color:#43192d;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.2)}
-.welcome-button span{font-size:17px;margin-left:5px}
-.welcome-hint{font-size:11px;color:#dcb9c5;margin:15px 0 0;min-height:18px}
-.welcome-bottom{position:absolute;bottom:23px;font-size:9px;letter-spacing:.18em;color:rgba(255,224,233,.58)}
-.welcome-screen.leaving{opacity:0;visibility:hidden;pointer-events:none}
-.heart-particles{position:fixed;inset:0;z-index:1100;pointer-events:none;overflow:hidden}
-.floating-heart{position:absolute;bottom:-45px;color:#ff9dbb;text-shadow:0 0 12px rgba(255,145,180,.7);animation:heart-rise var(--duration,3s) ease-out forwards;opacity:0}
-@keyframes heart-rise{0%{transform:translate3d(0,0,0) scale(.45) rotate(-12deg);opacity:0}12%{opacity:.95}100%{transform:translate3d(var(--drift,20px),-110vh,0) scale(1.25) rotate(18deg);opacity:0}}
-@keyframes twinkle{from{opacity:.25;transform:scale(.8)}to{opacity:.9;transform:scale(1.2)}}
-body.locked{overflow:hidden}body.locked .page{visibility:hidden}
-@media(prefers-reduced-motion:reduce){.floating-heart{animation-duration:1s!important}.welcome-screen{transition:none}}
-
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#240b18">
+  <title>Nuestro para siempre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#fbf1f2;--paper:#fff9f8;--ink:#3a1423;--muted:#7c4d5e;--rose:#b03358;--gold:#9c7440;--line:#e9cbd2;--glow:rgba(244,167,187,.38);--shadow:0 18px 55px rgba(90,30,50,.13);--script:'Pinyon Script',cursive;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Jost',sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 50% 0%,var(--glow),transparent 55%),var(--bg);color:var(--ink);font:16px/1.65 var(--sans)}body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.13;background-image:radial-gradient(#b8798c .7px,transparent .7px);background-size:23px 23px;z-index:-1}button,input,textarea{font:inherit}button{cursor:pointer}.page{max-width:980px;margin:auto;padding:20px 22px 70px}.topbar{display:flex;justify-content:flex-end;min-height:42px}.theme-btn,.small-btn{border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:30px;padding:8px 14px;font-size:13px}.hero{text-align:center;padding:45px 10px 32px}.eyebrow{text-transform:uppercase;letter-spacing:.25em;font-size:11px;color:var(--rose)}h1,h2,h3,p{margin-top:0}.hero h1{font:400 clamp(58px,12vw,108px)/.98 var(--script);margin:10px 0;color:var(--rose)}.subtitle{font:italic 22px/1.4 var(--serif);color:var(--muted);max-width:570px;margin:0 auto}.ornament{color:var(--gold);font-size:25px;margin:18px}.hero-date{font-size:12px;letter-spacing:.16em;color:var(--muted)}section{margin:50px 0;scroll-margin-top:22px}.paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:9px;box-shadow:var(--shadow);padding:clamp(23px,5vw,42px)}.paper:before{content:"";position:absolute;inset:7px;border:1px solid rgba(156,116,64,.18);border-radius:5px;pointer-events:none}.intro{text-align:center;max-width:760px;margin:0 auto}.script-title{font:42px/1.2 var(--script);color:var(--rose);margin-bottom:8px}.intro p{font:20px/1.65 var(--serif);color:var(--muted);max-width:650px;margin:0 auto}.section-head{text-align:center;margin-bottom:24px}.section-head h2{font:500 clamp(34px,6vw,48px)/1.1 var(--serif);margin:5px 0;color:var(--ink)}.section-head p{font-size:14px;color:var(--muted);max-width:570px;margin:8px auto 0}.letter-card{max-width:780px;margin:auto}.letter-card .letter-number{font:400 30px var(--script);color:var(--gold);text-align:center;margin:0 0 3px}.letter-card h2{text-align:center;font:500 clamp(35px,7vw,52px)/1.1 var(--serif);margin:0;color:var(--rose)}.letter-greeting{text-align:center;font:italic 21px var(--serif);color:var(--muted);margin:5px 0 24px}.letter-body{font:20px/1.75 var(--serif);color:var(--ink)}.letter-body p{margin:0 0 16px}.letter-sign{font:34px var(--script);text-align:right;color:var(--rose);margin:22px 0 0}.story-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.story-card,.moment{background:var(--paper);border:1px solid var(--line);padding:22px;border-radius:8px;box-shadow:var(--shadow)}.story-card .number{font:32px var(--script);color:var(--rose)}.story-card h3,.moment h3{font:600 25px var(--serif);margin:2px 0 8px}.story-card p,.moment p{color:var(--muted);margin:0;white-space:pre-wrap}.story-card time,.moment time{display:block;color:var(--gold);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:6px}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.photo{margin:0;background:white;padding:9px 9px 24px;box-shadow:0 8px 22px rgba(70,25,40,.12);transform:rotate(var(--tilt));transition:transform .2s}.photo:hover{transform:rotate(0) translateY(-4px)}.photo img{width:100%;aspect-ratio:1;object-fit:cover;display:block;background:#f1dfe4}.photo figcaption{text-align:center;font:20px var(--script);color:#714253;padding-top:7px;overflow-wrap:anywhere}.photo button{display:block;margin:4px auto 0}.timeline{max-width:700px;margin:auto;position:relative}.timeline:before{content:"";position:absolute;left:14px;top:5px;bottom:5px;width:1px;background:var(--line)}.moment{position:relative;margin:0 0 15px 48px}.moment:before{content:"♡";position:absolute;left:-42px;top:0;width:24px;height:24px;border-radius:50%;background:var(--paper);color:var(--rose);text-align:center}.counter-wrap{background:linear-gradient(145deg,#3b1428,#6b2942);color:#fff8f5;text-align:center;border-radius:12px;padding:35px 20px;box-shadow:var(--shadow)}.counter-wrap h2{font:400 45px/1.1 var(--script);margin:0 0 7px}.counter-wrap>p{color:#f0cbd6}.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:23px 0}.unit{min-width:78px;padding:12px 10px;border:1px solid rgba(255,255,255,.25);border-radius:8px;background:rgba(255,255,255,.07)}.unit strong{display:block;font:500 34px var(--serif)}.unit span{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#f0cbd6}.gold-btn,.rose-btn{border:0;border-radius:30px;padding:11px 22px;background:#e5c28b;color:#351729;font-weight:600}.rose-btn{background:var(--rose);color:white}.counter-note{font-size:12px;margin:12px 0 0!important}.music-card{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.vinyl{width:94px;height:94px;flex:0 0 94px;border-radius:50%;background:repeating-radial-gradient(circle,#26111d 0 3px,#39202c 4px 5px);display:grid;place-items:center}.vinyl:after{content:"♡";width:27px;height:27px;border-radius:50%;background:#d9a1ad;color:#5b263b;display:grid;place-items:center}.music-info{flex:1;min-width:180px}.music-info h3{font:600 27px var(--serif);margin:0}.music-info p{font-size:13px;color:var(--muted);margin:3px 0 10px}.music-info audio{max-width:100%;height:36px}.editor{margin-top:20px;background:rgba(255,255,255,.5);border:1px solid var(--line);border-radius:9px;padding:20px}.editor h3{font:600 24px var(--serif);margin:0 0 12px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;color:var(--muted);font-weight:600}.field input,.field textarea{width:100%;border:1px solid var(--line);border-radius:7px;padding:10px 12px;background:var(--paper);color:var(--ink)}.field textarea{min-height:100px;resize:vertical}.editor-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:12px}.hint{font-size:11px;color:var(--muted);margin:8px 0 0}.empty{text-align:center;color:var(--muted);padding:24px;border:1px dashed var(--line);border-radius:8px}.footer{text-align:center;padding:32px 10px 10px;color:var(--muted);font:24px var(--script)}.footer small{display:block;font:11px var(--sans);letter-spacing:.12em;text-transform:uppercase;margin-top:4px}body.dark{--bg:#240b18;--paper:#331424;--ink:#fbe9ee;--muted:#d1a6b4;--rose:#f59bb4;--gold:#e3b987;--line:#5a2a40;--glow:rgba(176,51,88,.24);--shadow:0 18px 55px rgba(0,0,0,.35)}body.dark .photo{background:#fff}body.dark .photo figcaption{color:#714253}body.dark .editor{background:#2c1020}
+    .welcome-screen{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 18px;background:radial-gradient(ellipse at 50% 35%,rgba(174,74,105,.25),transparent 48%),linear-gradient(145deg,#210b18,#3b1428 58%,#1d0915);color:#fff3f6;text-align:center;transition:opacity 1s,visibility 1s}.welcome-card{width:min(100%,430px);padding:32px 24px;border:1px solid rgba(255,220,230,.24);border-radius:22px;background:rgba(255,245,248,.075);box-shadow:0 22px 80px rgba(0,0,0,.25)}.welcome-kitten{font-size:50px}.welcome-kicker{font-size:10px;letter-spacing:.22em;color:#e8b8c7;margin:12px 0 4px}.welcome-card h2{font:400 58px/1 var(--script);color:#ffdce7;margin:4px 0 12px}.welcome-copy{font:italic 20px/1.4 var(--serif);color:#f5dce4;margin:0 auto 17px}.welcome-card input{width:210px;text-align:center;letter-spacing:.28em;color:white;background:rgba(255,255,255,.09);border:1px solid rgba(255,220,230,.38);border-radius:12px;padding:12px}.welcome-button{display:block;margin:15px auto 0;border:0;border-radius:30px;padding:12px 23px;background:linear-gradient(110deg,#f2c6d2,#e8bd91);color:#43192d;font-weight:600}.welcome-hint{font-size:11px;color:#dcb9c5;margin:13px 0 0;min-height:18px}.welcome-bottom{position:absolute;bottom:20px;font-size:9px;letter-spacing:.16em;color:rgba(255,224,233,.65)}.welcome-screen.leaving{opacity:0;visibility:hidden;pointer-events:none}body.locked{overflow:hidden}body.locked .page{visibility:hidden}.heart-particles{position:fixed;inset:0;z-index:1100;pointer-events:none;overflow:hidden}.floating-heart{position:absolute;bottom:-45px;color:#ff9dbb;animation:heart-rise var(--duration,3s) ease-out forwards;opacity:0}@keyframes heart-rise{0%{transform:translateY(0) scale(.5);opacity:0}12%{opacity:.95}100%{transform:translate(var(--drift),-110vh) scale(1.2);opacity:0}}
+    @media(max-width:650px){.page{padding:12px 15px 50px}.hero{padding-top:32px}.story-grid{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.photo{padding:7px 7px 20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.counter-wrap{padding:30px 12px}.unit{min-width:66px}.letter-body{font-size:18px}.letter-card .paper{padding:25px 20px}.welcome-bottom{max-width:90%;line-height:1.5}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}.floating-heart{animation-duration:1s!important}}
+  </style>
 </head>
 <body>
-
-<div class="welcome-screen" id="welcomeScreen">
-  <div class="welcome-card">
-    <div class="welcome-kitten" aria-hidden="true">🐈‍⬛</div>
-    <div class="welcome-sparkle">✦ &nbsp; ♡ &nbsp; ✦</div>
-    <p class="welcome-kicker">UN PEQUEÑO UNIVERSO PARA DOS</p>
-    <h2>Hola, mi amor</h2>
-    <p class="welcome-copy">¿Recuerdas la fecha en que comenzó nuestra historia?</p>
-    <div class="date-code" aria-label="Código de nuestra fecha">
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="welcome-card">
+      <div class="welcome-kitten" aria-hidden="true">🐈‍⬛</div><div>✦ &nbsp; ♡ &nbsp; ✦</div>
+      <p class="welcome-kicker">UN PEQUEÑO UNIVERSO PARA DOS</p>
+      <h2>Hola, mi amor</h2>
+      <p class="welcome-copy">¿Recuerdas la fecha en que comenzó nuestra historia?</p>
       <input id="loveCode" type="text" inputmode="numeric" maxlength="8" placeholder="DDMMAAAA" autocomplete="off" aria-label="Introduce nuestra fecha especial">
+      <button class="welcome-button" id="openOurStory" type="button">Abrir nuestro recuerdo ♡</button>
+      <p class="welcome-hint" id="welcomeHint">Una fecha, dos corazones y una historia por escribir.</p>
     </div>
-    <button class="welcome-button" id="openOurStory" type="button">Abrir nuestro recuerdo <span>♡</span></button>
-    <p class="welcome-hint" id="welcomeHint">Una fecha, dos corazones y una historia por escribir.</p>
+    <div class="welcome-bottom">SANTIAGO &amp; MARISOL · DESDE EL 1 DE SEPTIEMBRE DE 2026</div>
   </div>
-  <div class="welcome-bottom">SANTIAGO &amp; MARISOL · DESDE EL 1 DE SEPTIEMBRE DE 2026</div>
-</div>
-<div class="heart-particles" id="heartParticles" aria-hidden="true"></div>
+  <div class="heart-particles" id="heartParticles" aria-hidden="true"></div>
 
-<div class="page" id="mainPage">
-  <div class="topbar"><button class="theme-btn" id="themeToggle" type="button">☾ Cambiar ambiente</button></div>
-  <header class="hero">
-    <div class="eyebrow">Una historia escrita por dos corazones</div>
-    <h1>Nuestro para siempre</h1>
-    <p class="subtitle">Hay encuentros que parecen casualidad, pero se sienten como destino.</p>
-    <div class="ornament">♡</div>
-    <div class="hero-date" id="heroNames">SANTIAGO &amp; MARISOL · NUESTRA HISTORIA</div>
-  </header>
+  <div class="page">
+    <div class="topbar"><button class="theme-btn" id="themeToggle" type="button">☾ Cambiar ambiente</button></div>
+    <header class="hero">
+      <div class="eyebrow">Una historia escrita por dos corazones</div>
+      <h1>Nuestro para siempre</h1>
+      <p class="subtitle">Hay encuentros que parecen casualidad, pero se sienten como destino.</p>
+      <div class="ornament">♡</div>
+      <div class="hero-date">SANTIAGO &amp; MARISOL · NUESTRA HISTORIA</div>
+    </header>
+    <main>
+      <section class="intro paper">
+        <div class="script-title">Para mi persona favorita</div>
+        <p>Quiero guardar aquí cada sonrisa, cada aventura y cada pequeño instante que hace que nuestra historia sea única. Que estas páginas nos recuerden siempre todo lo bonito que hemos construido.</p>
+      </section>
 
-  <main>
-    <section class="intro paper">
-      <div class="script">Para mi persona favorita</div>
-      <p>Quiero guardar aquí cada sonrisa, cada aventura y cada pequeño instante que hace que nuestra historia sea única. Que estas páginas nos recuerden siempre todo lo bonito que hemos construido.</p>
-    </section>
+      <section id="carta">
+        <div class="section-head"><div class="eyebrow">Un pedacito de mi corazón</div><h2>Una carta para ti</h2></div>
+        <article class="paper letter-card">
+          <p class="letter-number">02</p>
+          <h2>Mi mundo eres tú</h2>
+          <p class="letter-greeting">Para ti, mi amor 🤍</p>
+          <div class="letter-body">
+            <p>Mi amorcito, quiero que sepas que no tienes idea de lo feliz que me hace tenerte en mi vida. A veces me pongo a pensar en cómo comenzó todo y me parece increíble que una persona pueda llegar a significar tanto en tan poco tiempo.</p>
+            <p>Desde que llegaste, has hecho que muchas cosas se sientan diferentes. Me encanta escucharte, compartir mis días contigo, conocer cada parte de ti y descubrir, poco a poco, todas esas pequeñas cosas que te hacen ser tan especial.</p>
+            <p>Quiero verte crecer, cumplir tus sueños y convertirme en alguien que te acompañe y te apoye en cada paso. Sé que no somos perfectos, que podemos equivocarnos y que habrá días difíciles, pero quiero que siempre recordemos que vale la pena cuidar lo bonito que estamos construyendo.</p>
+            <p>Gracias por abrirme tu corazón, por confiar en mí, por escucharme y por hacerme sentir querido. Gracias por cada conversación, cada risa y cada momento que, aunque parezca pequeño, termina convirtiéndose en un recuerdo que guardo con muchísimo cariño.</p>
+            <p>No quiero prometerte que todo será perfecto; quiero prometerte que seguiré poniendo de mi parte, que siempre intentaré comprenderte y que nunca dejaré de valorar la oportunidad de compartir mi vida contigo.</p>
+          </div>
+          <p class="letter-sign">Con todo mi amor ♡</p>
+        </article>
+      </section>
 
-    <section id="historias">
-      <div class="section-head"><div class="eyebrow">Capítulo uno, dos, tres...</div><h2>Cómo comenzó todo</h2><p>Esos primeros momentos que todavía viven en nuestra memoria.</p></div>
-      <div class="story-grid" id="storiesList"></div>
-    </section>
-
-    <section id="recuerdos">
-      <div class="section-head"><div class="eyebrow">Pequeños instantes, inmenso amor</div><h2>Nuestros recuerdos</h2><p>Una colección de momentos que siempre merecerán volver a mirarse.</p></div>
-      <div class="gallery" id="gallery">
-        <figure class="photo" style="--tilt:-1.5deg"><img src="nuestros-recuerdos/freefire.png" alt="Santiago y Marisol en Free Fire"><figcaption>Nuestra aventura en Free Fire ♡</figcaption></figure>
-        <figure class="photo" style="--tilt:1.5deg"><img src="nuestros-recuerdos/roblox.png" alt="Santiago y Marisol en Roblox"><figcaption>Un momento juntos en Roblox ♡</figcaption></figure>
-        <figure class="photo" style="--tilt:-1.5deg"><img src="nuestros-recuerdos/albion.png" alt="Santiago y Marisol en Albion"><figcaption>Explorando nuevas aventuras ♡</figcaption></figure>
-        <figure class="photo" style="--tilt:1.5deg"><img src="nuestros-recuerdos/minecraft.png" alt="Santiago y Marisol en Minecraft"><figcaption>Nuestro pequeño mundo en Minecraft ♡</figcaption></figure>
-      </div>
-    </section>
-
-    <section id="momentos">
-      <div class="section-head"><div class="eyebrow">El camino que compartimos</div><h2>Nuestra línea del tiempo</h2><p>Fechas que se convirtieron en parte de nosotros.</p></div>
-      <div class="timeline" id="timeline"></div>
-    </section>
-
-    <section id="boda">
-      <div class="section-head"><div class="eyebrow">Cada segundo de nuestra historia</div><h2>Desde que comenzó nuestro para siempre</h2></div>
-      <div class="counter-wrap">
-        <h2>El tiempo que llevamos juntos</h2>
-        <p>Y que siga contando cada segundo, cada día y cada recuerdo.</p>
-        <div class="countdown" id="countdown" aria-live="polite">
-          <div class="unit"><strong>—</strong><span>Días</span></div><div class="unit"><strong>—</strong><span>Horas</span></div><div class="unit"><strong>—</strong><span>Minutos</span></div><div class="unit"><strong>—</strong><span>Segundos</span></div>
+      <section id="historias">
+        <div class="section-head"><div class="eyebrow">Capítulo uno, dos, tres...</div><h2>Cómo comenzó todo</h2><p>Esos primeros momentos que todavía viven en nuestra memoria.</p></div>
+        <div class="story-grid" id="storiesList"></div>
+      </section>
+      <section id="recuerdos">
+        <div class="section-head"><div class="eyebrow">Pequeños instantes, inmenso amor</div><h2>Nuestros recuerdos</h2><p>Una colección de momentos que siempre merecerán volver a mirarse.</p></div>
+        <div class="gallery" id="gallery"></div>
+      </section>
+      <section id="momentos">
+        <div class="section-head"><div class="eyebrow">El camino que compartimos</div><h2>Nuestra línea del tiempo</h2><p>Fechas que se convirtieron en parte de nosotros.</p></div>
+        <div class="timeline" id="timeline"></div>
+      </section>
+      <section id="contador">
+        <div class="section-head"><div class="eyebrow">Cada segundo de nuestra historia</div><h2>Desde que comenzó nuestro para siempre</h2></div>
+        <div class="counter-wrap"><h2>El tiempo que llevamos juntos</h2><p>Y que siga contando cada segundo, cada día y cada recuerdo.</p>
+          <div class="countdown" id="countdown" aria-live="polite"></div>
+          <p id="weddingLabel">Juntos desde el 1 de septiembre de 2026.</p>
+          <button class="gold-btn" id="achievedBtn" type="button">♡ Lo logramos</button>
+          <p id="achievedMessage" hidden>¡Lo logramos, mi amor!</p>
+          <p class="counter-note" id="counterNote">Cada segundo suma a nuestra historia. ♡</p>
         </div>
-        <p class="wedding-date" id="weddingLabel">Nuestra historia comenzó el 1 de septiembre de 2026.</p>
-        <button class="gold-btn" id="achievedBtn" type="button">♡ Lo logramos</button>
-        <div id="achievedMessage" class="achieved" hidden>¡Lo logramos, mi amor!</div>
-        <p class="counter-note" id="counterNote">Este contador seguirá avanzando hasta que pulsemos “Lo logramos”.</p>
-      </div>
-    </section>
-
-    <section id="cancion">
-      <div class="section-head"><div class="eyebrow">La banda sonora de nosotros</div><h2>Nuestra canción</h2><p>Porque hay melodías que siempre nos llevan de vuelta a un recuerdo.</p></div>
-      <div class="paper music-card">
-        <div class="vinyl" aria-hidden="true"></div>
-        <div class="music-info"><h3 id="songTitle">Una canción para nosotros</h3><p id="songDescription">Agrega aquí esa canción que tiene un significado especial.</p>
-          <div class="music-controls"><input id="musicInput" type="file" accept="audio/*"><audio id="audioPlayer" controls hidden></audio></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="personalizar">
-      <div class="section-head"><div class="eyebrow">Este rincón es de ustedes</div><h2>Personaliza nuestra historia</h2><p>Agrega textos, fotos, fechas y la canción que quieras. Los cambios se guardan en este dispositivo.</p></div>
-      <div class="editor">
-        <h3>Agregar una historia</h3>
-        <div class="form-grid">
-          <div class="field"><label for="storyTitle">Título</label><input id="storyTitle" placeholder="Ej. La primera vez que hablamos"></div>
-          <div class="field"><label for="storyDate">Fecha (opcional)</label><input id="storyDate" type="date"></div>
-          <div class="field full"><label for="storyText">Cuéntala con tus palabras</label><textarea id="storyText" placeholder="Escribe ese recuerdo que nunca quieres olvidar..."></textarea></div>
-        </div>
-        <div class="editor-actions"><button class="rose-btn" id="addStory" type="button">＋ Guardar historia</button></div>
-      </div>
-      <div class="editor">
-        <h3>Agregar una fotografía</h3>
-        <div class="form-grid">
-          <div class="field"><label for="photoInput">Elegir foto</label><input id="photoInput" type="file" accept="image/*"></div>
-          <div class="field"><label for="photoCaption">Frase para la foto</label><input id="photoCaption" placeholder="Ej. Un día inolvidable"></div>
-        </div>
-        <div class="editor-actions"><button class="rose-btn" id="addPhoto" type="button">＋ Añadir a nuestros recuerdos</button></div>
-        <p class="hint">Consejo: usa fotos JPG o PNG. Para no llenar el almacenamiento del navegador, agrega imágenes de tamaño moderado.</p>
-      </div>
-      <div class="editor">
-        <h3>Agregar una fecha importante</h3>
-        <div class="form-grid">
-          <div class="field"><label for="momentTitle">¿Qué celebramos?</label><input id="momentTitle" placeholder="Ej. Nuestro primer viaje"></div>
-          <div class="field"><label for="momentDate">Fecha</label><input id="momentDate" type="date"></div>
-          <div class="field full"><label for="momentText">Un pequeño detalle (opcional)</label><input id="momentText" placeholder="Lo que hizo especial ese día..."></div>
-        </div>
-        <div class="editor-actions"><button class="rose-btn" id="addMoment" type="button">＋ Añadir a la línea del tiempo</button></div>
-      </div>
-      <div class="editor">
-        <h3>El día en que nos hicimos novios</h3>
-        <div class="form-grid">
-          <div class="field"><label for="relationshipDate">Fecha de inicio</label><input id="relationshipDate" type="date" value="2026-09-01"></div>
-        </div>
-        <div class="editor-actions"><button class="rose-btn" id="saveRelationshipDate" type="button">Guardar fecha</button><button class="small-btn" id="resetCounter" type="button">Volver a contar</button></div>
-        <p class="hint">El contador empieza el 1 de septiembre de 2026 y avanza sin fecha final. “Lo logramos” lo detiene y deja guardado ese momento.</p>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">Con todo mi amor, hoy y siempre. ♡<small>Una historia que sigue escribiéndose</small></footer>
-</div>
+      </section>
+      <section id="cancion">
+        <div class="section-head"><div class="eyebrow">La banda sonora de nosotros</div><h2>Nuestra canción</h2><p>Porque hay melodías que siempre nos llevan de vuelta a un recuerdo.</p></div>
+        <div class="paper music-card"><div class="vinyl" aria-hidden="true"></div><div class="music-info"><h3 id="songTitle">Una canción para nosotros</h3><p id="songDescription">Agrega aquí esa canción que tiene un significado especial.</p><input id="musicInput" type="file" accept="audio/*"><audio id="audioPlayer" controls hidden></audio></div></div>
+      </section>
+      <section id="personalizar">
+        <div class="section-head"><div class="eyebrow">Este rincón es de ustedes</div><h2>Personaliza nuestra historia</h2><p>Agrega textos, fotos y fechas importantes. Los cambios se guardan en este dispositivo.</p></div>
+        <div class="editor"><h3>Agregar una historia</h3><div class="form-grid"><div class="field"><label for="storyTitle">Título</label><input id="storyTitle" placeholder="Ej. La primera vez que hablamos"></div><div class="field"><label for="storyDate">Fecha (opcional)</label><input id="storyDate" type="date"></div><div class="field full"><label for="storyText">Cuéntala con tus palabras</label><textarea id="storyText" placeholder="Escribe ese recuerdo que nunca quieres olvidar..."></textarea></div></div><div class="editor-actions"><button class="rose-btn" id="addStory" type="button">＋ Guardar historia</button></div></div>
+        <div class="editor"><h3>Agregar una fotografía</h3><div class="form-grid"><div class="field"><label for="photoInput">Elegir foto</label><input id="photoInput" type="file" accept="image/*"></div><div class="field"><label for="photoCaption">Frase para la foto</label><input id="photoCaption" placeholder="Ej. Un día inolvidable"></div></div><div class="editor-actions"><button class="rose-btn" id="addPhoto" type="button">＋ Añadir a nuestros recuerdos</button></div><p class="hint">Usa fotos de tamaño moderado para no llenar el almacenamiento del navegador.</p></div>
+        <div class="editor"><h3>Agregar una fecha importante</h3><div class="form-grid"><div class="field"><label for="momentTitle">¿Qué celebramos?</label><input id="momentTitle" placeholder="Ej. Nuestro primer viaje"></div><div class="field"><label for="momentDate">Fecha</label><input id="momentDate" type="date"></div><div class="field full"><label for="momentText">Un pequeño detalle (opcional)</label><input id="momentText" placeholder="Lo que hizo especial ese día..."></div></div><div class="editor-actions"><button class="rose-btn" id="addMoment" type="button">＋ Añadir a la línea del tiempo</button></div></div>
+        <div class="editor"><h3>El día en que nos hicimos novios</h3><div class="form-grid"><div class="field"><label for="relationshipDate">Fecha de inicio</label><input id="relationshipDate" type="date" value="2026-09-01"></div></div><div class="editor-actions"><button class="rose-btn" id="saveRelationshipDate" type="button">Guardar fecha</button><button class="small-btn" id="resetCounter" type="button">Volver a contar</button></div><p class="hint">El contador empieza el 1 de septiembre de 2026 y avanza sin fecha final.</p></div>
+      </section>
+    </main>
+    <footer class="footer">Con todo mi amor, hoy y siempre. ♡<small>Una historia que sigue escribiéndose</small></footer>
+  </div>
 <script>
-const $=id=>document.getElementById(id);
-const KEY='nuestroParaSiempre_v1';
-const defaults={
- stories:[
-  {title:'Un encuentro inesperado en Roblox',date:'',text:'Jamás imaginé que conocería a alguien tan especial dentro de un videojuego. Todo comenzó en Roblox, en un juego llamado “Vecinos”. Apenas entré y escuché hablar a Marisol, sentí una conexión súper bonita con ella; fue de esas sensaciones que aparecen sin avisar y que no sabes muy bien cómo explicar.\n\nY hay una parte que todavía me da muchísima risa recordar: mi amigo Ariel estaba allí con su ligue, y Jhakeline se lo llevó como para regañarlo. Yo, por supuesto, no me iba a perder el chisme, así que Marisol y yo fuimos a averiguar qué estaba pasando jajaja. ¡Y casi la descubren a ella! Ariel se dio cuenta de que estábamos por allí y nosotros, intentando disimular, empezamos a decirle que no, que no habíamos escuchado nada jajaja. No sé cómo hicimos para aguantar la risa en ese momento; recuerdo lo muchísimo que nos divertimos con aquella pequeña aventura.\n\nDesde ese día, la conexión entre nosotros fue increíble; demasiado especial, diría yo. Cada conversación y cada risa hicieron que quisiera conocerla más. Jamás pensé que aquel encuentro tan inesperado se convertiría en algo tan importante para mí. Hoy puedo decir que la amo muchísimo y que me siento afortunado de tenerla en mi vida.\n\nQuién iba a pensar que una entrada cualquiera a Roblox, una conversación y hasta un chismecito terminarían siendo el comienzo de nuestra historia. A veces las cosas más bonitas llegan cuando menos las esperamos.'}
- ],
- photos:[
-  {src:'nuestros-recuerdos/freefire.png',caption:'Nuestra aventura en Free Fire ♡'},
-  {src:'nuestros-recuerdos/roblox.png',caption:'Un momento juntos en Roblox ♡'},
-  {src:'nuestros-recuerdos/albion.png',caption:'Explorando nuevas aventuras ♡'},
-  {src:'nuestros-recuerdos/minecraft.png',caption:'Nuestro pequeño mundo en Minecraft ♡'}
- ],moments:[],relationshipDate:'2026-09-01',achieved:false
-};
-let data;
-try{data={...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')};}catch(e){data={...defaults};}
-// Conserva los cuatro recuerdos iniciales aunque exista un guardado antiguo sin fotografías.
-if(!Array.isArray(data.photos) || data.photos.length===0){
- data.photos=[...defaults.photos];
- try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){}
-}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){alert('El almacenamiento del navegador está lleno. Prueba con fotos más pequeñas.');}}
-function escapeHTML(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
-function prettyDate(d){if(!d)return '';const [y,m,day]=d.split('-').map(Number);return new Date(y,m-1,day).toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'});}
-function renderStories(){
- $('storiesList').innerHTML=data.stories.length?data.stories.map((s,i)=>`<article class="story-card"><div class="number">0${i+1}</div>${s.date?`<time>${escapeHTML(prettyDate(s.date))}</time>`:''}<h3>${escapeHTML(s.title)}</h3><p>${escapeHTML(s.text)}</p><button class="small-btn" data-delete-story="${i}" style="margin-top:14px">Eliminar</button></article>`).join(''):'<div class="empty">Todavía no hay historias. ¡Agrega la primera!</div>';
-}
-function renderPhotos(){
- $('gallery').innerHTML=data.photos.length?data.photos.map((p,i)=>`<figure class="photo" style="--tilt:${i%2===0?'-1.5deg':'1.5deg'}"><img src="${p.src}" alt="${escapeHTML(p.caption||'Recuerdo de ustedes')}"><figcaption>${escapeHTML(p.caption||'Un recuerdo bonito')}<br><button class="small-btn" data-delete-photo="${i}">Eliminar</button></figcaption></figure>`).join(''):'<div class="empty">Sus fotografías favoritas aparecerán aquí.</div>';
-}
-function renderMoments(){
- const sorted=[...data.moments].sort((a,b)=>(a.date||'').localeCompare(b.date||''));
- $('timeline').innerHTML=sorted.length?sorted.map((m,i)=>`<article class="moment"><time>${escapeHTML(prettyDate(m.date)||'Un día especial')}</time><h3>${escapeHTML(m.title)}</h3><p>${escapeHTML(m.text||'')}</p><button class="small-btn" data-delete-moment="${data.moments.indexOf(m)}" style="margin-top:8px">Eliminar</button></article>`).join(''):'<div class="empty">Aquí irán las fechas que quieran recordar.</div>';
-}
-function renderCounter(){
- const cd=$('countdown'),label=$('weddingLabel'),btn=$('achievedBtn'),msg=$('achievedMessage');
- const startDate=data.relationshipDate||'2026-09-01';
- if(data.achieved){
-  cd.innerHTML='';
-  label.textContent='Este contador se detuvo para guardar nuestro “lo logramos”.';
-  btn.hidden=true;msg.hidden=false;
-  $('counterNote').textContent='El tiempo quedó pausado en este momento tan especial.';
-  return;
- }
- btn.hidden=false;msg.hidden=true;
- const start=new Date(startDate+'T00:00:00');
- label.textContent='Juntos desde el '+prettyDate(startDate);
- const elapsed=Math.max(0,Date.now()-start.getTime());
- const days=Math.floor(elapsed/86400000);
- const hours=Math.floor(elapsed%86400000/3600000);
- const mins=Math.floor(elapsed%3600000/60000);
- const secs=Math.floor(elapsed%60000/1000);
- cd.innerHTML=[[days,'Días'],[hours,'Horas'],[mins,'Minutos'],[secs,'Segundos']].map(([n,t])=>`<div class="unit"><strong>${String(n).padStart(2,'0')}</strong><span>${t}</span></div>`).join('');
- $('counterNote').textContent='Cada segundo suma a nuestra historia. ♡';
-}
-renderStories();renderPhotos();renderMoments();
-if(!$('relationshipDate').value)$('relationshipDate').value=data.relationshipDate||'2026-09-01';
-renderCounter();setInterval(renderCounter,1000);
-$('addStory').addEventListener('click',()=>{const title=$('storyTitle').value.trim(),text=$('storyText').value.trim();if(!title||!text){alert('Escribe un título y una historia.');return;}data.stories.push({title,text,date:$('storyDate').value});save();renderStories();$('storyTitle').value='';$('storyText').value='';$('storyDate').value='';});
-$('addPhoto').addEventListener('click',()=>{const file=$('photoInput').files[0];if(!file){alert('Primero elige una fotografía.');return;}if(!file.type.startsWith('image/')){alert('El archivo debe ser una imagen.');return;}if(file.size>3*1024*1024){alert('Elige una foto de menos de 3 MB para guardarla cómodamente.');return;}const reader=new FileReader();reader.onload=()=>{data.photos.push({src:reader.result,caption:$('photoCaption').value.trim()});save();renderPhotos();$('photoInput').value='';$('photoCaption').value='';};reader.readAsDataURL(file);});
-$('addMoment').addEventListener('click',()=>{const title=$('momentTitle').value.trim(),date=$('momentDate').value;if(!title||!date){alert('Añade un título y una fecha.');return;}data.moments.push({title,date,text:$('momentText').value.trim()});save();renderMoments();$('momentTitle').value='';$('momentDate').value='';$('momentText').value='';});
-$('saveRelationshipDate').addEventListener('click',()=>{const date=$('relationshipDate').value;if(!date){alert('Selecciona la fecha en que se hicieron novios.');return;}data.relationshipDate=date;data.achieved=false;save();renderCounter();alert('La fecha en que comenzó su historia quedó guardada.');});
-$('achievedBtn').addEventListener('click',()=>{if(!confirm('¿Quieren detener el contador y guardar este momento como “¡Lo logramos!”?'))return;data.achieved=true;save();renderCounter();});
-$('resetCounter').addEventListener('click',()=>{data.achieved=false;save();renderCounter();});
-document.addEventListener('click',e=>{const s=e.target.closest('[data-delete-story]'),p=e.target.closest('[data-delete-photo]'),m=e.target.closest('[data-delete-moment]');if(s&&confirm('¿Eliminar esta historia?')){data.stories.splice(+s.dataset.deleteStory,1);save();renderStories();}if(p&&confirm('¿Eliminar esta fotografía?')){data.photos.splice(+p.dataset.deletePhoto,1);save();renderPhotos();}if(m&&confirm('¿Eliminar esta fecha?')){data.moments.splice(+m.dataset.deleteMoment,1);save();renderMoments();}});
-let audioURL=null;
-$('musicInput').addEventListener('change',()=>{const f=$('musicInput').files[0];if(!f)return;if(!f.type.startsWith('audio/')){alert('Elige un archivo de audio.');return;}if(audioURL)URL.revokeObjectURL(audioURL);audioURL=URL.createObjectURL(f);$('audioPlayer').src=audioURL;$('audioPlayer').hidden=false;$('songTitle').textContent=f.name.replace(/\.[^.]+$/,'');$('songDescription').textContent='Tu canción está lista para reproducirse. Elige el archivo de nuevo cuando abras esta página en otro dispositivo.';});
-$('themeToggle').addEventListener('click',()=>{document.body.classList.toggle('dark');$('themeToggle').textContent=document.body.classList.contains('dark')?'☀ Ambiente claro':'☾ Ambiente oscuro';});
-
-// Entrada romántica: el código corresponde al 1 de septiembre de 2026.
-document.body.classList.add('locked');
-const welcomeScreen=$('welcomeScreen'),loveCode=$('loveCode'),welcomeHint=$('welcomeHint'),heartParticles=$('heartParticles');
-function launchHearts(){
- const symbols=['♥','♡','❤'];
- for(let i=0;i<46;i++){
-  const heart=document.createElement('span');
-  heart.className='floating-heart';
-  heart.textContent=symbols[i%symbols.length];
-  heart.style.left=(Math.random()*100)+'%';
-  heart.style.setProperty('--duration',(2.5+Math.random()*2.2)+'s');
-  heart.style.setProperty('--drift',((Math.random()*150)-75)+'px');
-  heart.style.fontSize=(13+Math.random()*24)+'px';
-  heart.style.animationDelay=(Math.random()*.8)+'s';
-  heartParticles.appendChild(heart);
- }
- setTimeout(()=>{heartParticles.innerHTML='';welcomeScreen.classList.add('leaving');document.body.classList.remove('locked');},3900);
-}
-function tryOpenStory(){
- const entered=loveCode.value.replace(/\D/g,'');
- if(entered==='01092026'){
-  $('openOurStory').disabled=true;
-  welcomeHint.textContent='Nuestro comienzo… y todos los recuerdos que vienen. ♡';
-  launchHearts();
- }else{
-  welcomeHint.textContent='Casi, mi amor. Prueba con nuestra fecha especial. ♡';
-  loveCode.value='';
-  loveCode.focus();
- }
-}
-$('openOurStory').addEventListener('click',tryOpenStory);
-loveCode.addEventListener('keydown',e=>{if(e.key==='Enter')tryOpenStory();});
-
+  const $=id=>document.getElementById(id);
+  const KEY='nuestroParaSiempre_v1';
+  const defaults={stories:[{title:'Un encuentro inesperado en Roblox',date:'',text:'Jamás imaginé que conocería a alguien tan especial dentro de un videojuego. Todo comenzó en Roblox, en un juego llamado “Vecinos”. Apenas entré y escuché hablar a Marisol, sentí una conexión súper bonita. Desde ese día, cada conversación y cada risa hicieron que quisiera conocerla más. A veces las cosas más bonitas llegan cuando menos las esperamos.'}],photos:[{src:'nuestros-recuerdos/freefire.png',caption:'Nuestra aventura en Free Fire ♡'},{src:'nuestros-recuerdos/roblox.png',caption:'Un momento juntos en Roblox ♡'},{src:'nuestros-recuerdos/albion.png',caption:'Explorando nuevas aventuras ♡'},{src:'nuestros-recuerdos/minecraft.png',caption:'Nuestro pequeño mundo en Minecraft ♡'}],moments:[],relationshipDate:'2026-09-01',achieved:false};
+  let data;
+  try{data={...defaults,...JSON.parse(localStorage.getItem(KEY)||'{}')};}catch(e){data={...defaults};}
+  if(!Array.isArray(data.stories))data.stories=[...defaults.stories];
+  if(!Array.isArray(data.photos)||!data.photos.length)data.photos=[...defaults.photos];
+  if(!Array.isArray(data.moments))data.moments=[];
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(data));}catch(e){alert('El almacenamiento está lleno. Prueba con fotos más pequeñas.');}}
+  function esc(s=''){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function prettyDate(d){if(!d)return '';const [y,m,day]=d.split('-').map(Number);return new Date(y,m-1,day).toLocaleDateString('es-ES',{day:'numeric',month:'long',year:'numeric'});}
+  function renderStories(){$('storiesList').innerHTML=data.stories.length?data.stories.map((s,i)=>`<article class="story-card"><div class="number">${String(i+1).padStart(2,'0')}</div>${s.date?`<time>${esc(prettyDate(s.date))}</time>`:''}<h3>${esc(s.title)}</h3><p>${esc(s.text)}</p><button class="small-btn" data-delete-story="${i}" type="button">Eliminar</button></article>`).join(''):'<div class="empty">Todavía no hay historias. ¡Agrega la primera!</div>';}
+  function renderPhotos(){$('gallery').innerHTML=data.photos.length?data.photos.map((p,i)=>`<figure class="photo" style="--tilt:${i%2===0?'-1.5deg':'1.5deg'}"><img src="${p.src}" alt="${esc(p.caption||'Un recuerdo bonito')}" loading="lazy"><figcaption>${esc(p.caption||'Un recuerdo bonito')}<button class="small-btn" data-delete-photo="${i}" type="button">Eliminar</button></figcaption></figure>`).join(''):'<div class="empty">Sus fotografías favoritas aparecerán aquí.</div>';}
+  function renderMoments(){const items=[...data.moments].sort((a,b)=>(a.date||'').localeCompare(b.date||''));$('timeline').innerHTML=items.length?items.map((m,i)=>`<article class="moment"><time>${esc(prettyDate(m.date)||'Un día especial')}</time><h3>${esc(m.title)}</h3><p>${esc(m.text||'')}</p><button class="small-btn" data-delete-moment="${i}" type="button">Eliminar</button></article>`).join(''):'<div class="empty">Aquí irán las fechas que quieran recordar.</div>';}
+  function renderCounter(){const cd=$('countdown'),startDate=data.relationshipDate||'2026-09-01';if(data.achieved){cd.innerHTML='';$('weddingLabel').textContent='Este contador se detuvo para guardar nuestro “lo logramos”.';$('achievedBtn').hidden=true;$('achievedMessage').hidden=false;$('counterNote').textContent='El tiempo quedó pausado en este momento tan especial.';return;}$('achievedBtn').hidden=false;$('achievedMessage').hidden=true;$('weddingLabel').textContent='Juntos desde el '+prettyDate(startDate);const elapsed=Math.max(0,Date.now()-new Date(startDate+'T00:00:00').getTime());const values=[[Math.floor(elapsed/86400000),'Días'],[Math.floor(elapsed%86400000/3600000),'Horas'],[Math.floor(elapsed%3600000/60000),'Minutos'],[Math.floor(elapsed%60000/1000),'Segundos']];cd.innerHTML=values.map(([n,t])=>`<div class="unit"><strong>${String(n).padStart(2,'0')}</strong><span>${t}</span></div>`).join('');$('counterNote').textContent='Cada segundo suma a nuestra historia. ♡';}
+  renderStories();renderPhotos();renderMoments();$('relationshipDate').value=data.relationshipDate||'2026-09-01';renderCounter();setInterval(renderCounter,1000);
+  $('addStory').addEventListener('click',()=>{const title=$('storyTitle').value.trim(),text=$('storyText').value.trim();if(!title||!text){alert('Escribe un título y una historia.');return;}data.stories.push({title,text,date:$('storyDate').value});save();renderStories();$('storyTitle').value='';$('storyText').value='';$('storyDate').value='';});
+  $('addPhoto').addEventListener('click',()=>{const file=$('photoInput').files[0];if(!file){alert('Primero elige una fotografía.');return;}if(!file.type.startsWith('image/')){alert('El archivo debe ser una imagen.');return;}if(file.size>2*1024*1024){alert('Elige una foto de menos de 2 MB para guardarla.');return;}const reader=new FileReader();reader.onload=()=>{data.photos.push({src:reader.result,caption:$('photoCaption').value.trim()||'Un recuerdo bonito'});save();renderPhotos();$('photoInput').value='';$('photoCaption').value='';};reader.readAsDataURL(file);});
+  $('addMoment').addEventListener('click',()=>{const title=$('momentTitle').value.trim(),date=$('momentDate').value;if(!title||!date){alert('Añade un título y una fecha.');return;}data.moments.push({title,date,text:$('momentText').value.trim()});save();renderMoments();$('momentTitle').value='';$('momentDate').value='';$('momentText').value='';});
+  document.addEventListener('click',e=>{const s=e.target.closest('[data-delete-story]'),p=e.target.closest('[data-delete-photo]'),m=e.target.closest('[data-delete-moment]');if(s&&confirm('¿Eliminar esta historia?')){data.stories.splice(+s.dataset.deleteStory,1);save();renderStories();}if(p&&confirm('¿Eliminar esta fotografía?')){data.photos.splice(+p.dataset.deletePhoto,1);save();renderPhotos();}if(m&&confirm('¿Eliminar esta fecha?')){const displayed=[...data.moments].sort((a,b)=>(a.date||'').localeCompare(b.date||''));data.moments.splice(data.moments.indexOf(displayed[+m.dataset.deleteMoment]),1);save();renderMoments();}});
+  $('saveRelationshipDate').addEventListener('click',()=>{const date=$('relationshipDate').value;if(!date){alert('Selecciona la fecha de inicio.');return;}data.relationshipDate=date;data.achieved=false;save();renderCounter();});
+  $('achievedBtn').addEventListener('click',()=>{if(!confirm('¿Quieren detener el contador y guardar este momento como “¡Lo logramos!”?'))return;data.achieved=true;save();renderCounter();});
+  $('resetCounter').addEventListener('click',()=>{data.achieved=false;save();renderCounter();});
+  let audioURL=null;$('musicInput').addEventListener('change',()=>{const f=$('musicInput').files[0];if(!f)return;if(!f.type.startsWith('audio/')){alert('Elige un archivo de audio.');return;}if(audioURL)URL.revokeObjectURL(audioURL);audioURL=URL.createObjectURL(f);$('audioPlayer').src=audioURL;$('audioPlayer').hidden=false;$('songTitle').textContent=f.name.replace(/\.[^.]+$/,'');$('songDescription').textContent='Tu canción está lista para reproducirse.';});
+  $('themeToggle').addEventListener('click',()=>{document.body.classList.toggle('dark');$('themeToggle').textContent=document.body.classList.contains('dark')?'☀ Ambiente claro':'☾ Cambiar ambiente';});
+  document.body.classList.add('locked');const welcome=$('welcomeScreen'),code=$('loveCode'),hint=$('welcomeHint'),particles=$('heartParticles');
+  function openStory(){if(code.value.replace(/\D/g,'')!=='01092026'){hint.textContent='Casi, mi amor. Prueba con nuestra fecha especial. ♡';code.value='';code.focus();return;}$('openOurStory').disabled=true;hint.textContent='Nuestro comienzo… y todos los recuerdos que vienen. ♡';for(let i=0;i<38;i++){const heart=document.createElement('span');heart.className='floating-heart';heart.textContent=['♥','♡','❤'][i%3];heart.style.left=Math.random()*100+'%';heart.style.setProperty('--duration',(2.5+Math.random()*2.2)+'s');heart.style.setProperty('--drift',(Math.random()*150-75)+'px');heart.style.fontSize=(13+Math.random()*24)+'px';heart.style.animationDelay=Math.random()*.8+'s';particles.appendChild(heart);}setTimeout(()=>{particles.innerHTML='';welcome.classList.add('leaving');document.body.classList.remove('locked');},3900);}
+  $('openOurStory').addEventListener('click',openStory);code.addEventListener('keydown',e=>{if(e.key==='Enter')openStory();});
 </script>
 </body>
 </html>
